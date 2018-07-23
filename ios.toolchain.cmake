@@ -358,7 +358,7 @@ set(CMAKE_C_FLAGS
 # Hidden visibilty is required for C++ on iOS.
 set(CMAKE_CXX_FLAGS
 "${XCODE_IOS_PLATFORM_VERSION_FLAGS} ${BITCODE} ${VISIBILITY} -fvisibility-inlines-hidden -fobjc-abi-version=2 -std=c++11 -stdlib=libc++ ${FOBJC_ARC} ${CXX_FLAGS}")
-set(CMAKE_CXX_FLAGS_DEBUG "{CMAKE_CXX_FLAGS} -DDEBUG -D_DEBUG -O0 -g -Wno-unknown-pragmas -Wno-attributes ${BITCODE}")
+set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS} -DDEBUG -D_DEBUG -O0 -g -Wno-unknown-pragmas -Wno-attributes ${BITCODE}")
 set(CMAKE_CXX_FLAGS_MINSIZEREL "${CMAKE_CXX_FLAGS} -DNDEBUG -Os -ffast-math ${BITCODE} ${CXX_FLAGS_MINSIZEREL}")
 set(CMAKE_CXX_FLAGS_RELWITHDEBINFO "${CMAKE_CXX_FLAGS} -DNDEBUG -O2 -g -ffast-math ${BITCODE} ${CXX_FLAGS_RELWITHDEBINFO}")
 set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS} -DNDEBUG -O3 -ffast-math ${BITCODE} ${CXX_FLAGS_RELEASE}")
